@@ -1,0 +1,7 @@
+
+body { background:#1e1e1e; color:white; font-family:sans-serif; margin:0;}
+.toolbar { background:#333; padding:10px; display:flex; gap:20px;}
+.main { display:flex;}
+canvas { background:white; image-rendering:pixelated; cursor:crosshair;}
+.panel { display:flex; flex-direction:column; padding:10px; gap:10px;}
+button { padding:10px; cursor:pointer;}

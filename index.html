@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <link rel="stylesheet" href="./bootstrap/bootstrap.css" />
+  <link rel="stylesheet" href="./src/styles/landing.css" />
+  <title>Piskel Clone</title>
+</head>
+
+<body>
+
+  <body>
+    <nav class="navbar sticky-top navbar-dark" id="navbar">
+      <a class="navbar-brand" href="#">Piskel Clone</a>
+      <div class="navbar-text">
+        <span>
+          Each gif deserves to be animated!
+        </span>
+      </div>
+      <div class="nav_btn_container">
+        <a href="piskel.html" target="_blank">
+          <button class="create_sprite" id="create_sprite">
+            Create Sprite
+          </button>
+        </a>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <section class="home-main bg0">
+          <div class="row">
+            <div class="main-intro col-xl-4">
+              <h2>
+                &nbsp;&nbsp;&nbsp;&nbsp;This app is a clone of one of the most &nbsp;&nbsp;popular online editor's
+                for creating animated sprites & pixel art
+              </h2>
+            </div>
+            <div class="mainImage-wrapper col-xl-8">
+              <img src="./img/mainImage.png" width="1024" height="500">
+            </div>
+          </div>
+        </section>
+        <section class="gif-wrapper bg1 col-12">
+          <h3>By Using This app You can Create Some Cool Stuff Like this:</h3>
+          <ul class="gifsList">
+            <li>
+              <img src="./src/gifs/example_1.gif">
+            </li>
+            <li>
+              <img src="./src/gifs/example_2.gif">
+            </li>
+            <li>
+              <img src="./src/gifs/example_3.gif">
+            </li>
+            <li>
+              <img src="./src/gifs/example_5.gif">
+            </li>
+          </ul>
+        </section>
+        <section class="features-wrapper bg0 col-12">
+          <div class="featuresList">
+
+            <div class="feature left">
+              <div class="featureTxt">
+                <h3>
+                  Live Preview
+                </h3>
+                <p>
+                  Check a preview of your animation
+                  in real time as you draw.
+                  Adjust the frame delay on the fly
+                </p>
+              </div>
+              <img src="./src/gifs/feat_1.gif">
+            </div>
+
+            <div class="feature right">
+              <img src="./img/feat_2.png">
+              <div class="featureTxt">
+                <h3>
+
+                </h3>
+                <p>
+
+                </p>
+              </div>
+            </div>
+
+            <div class="feature left">
+              <div class="featureTxt">
+                <h3>
+                  Export to GIF format
+                </h3>
+                <p>
+                  You can export Your animation to local files
+                  and share it with friends later!
+                </p>
+              </div>
+              <img class="exportToGifImg" src="./img/feat_4.png">
+            </div>
+
+            <div class="feature right">
+              <img src="./src/gifs/feat_3.gif">
+              <div class="featureTxt">
+                <h3>
+                  Open
+                  <source>
+                </h3>
+                <p>
+                  This project is also open source just like original piskel
+                  <br>
+                  (Below You can find link's to both sources)
+                </p>
+              </div>
+            </div>
+
+          </div>
+      </div>
+      </section>
+    </div>
+    </div>
+
+    <footer>
+      <div class="author">
+        <h2><a href="" target="_blank"></a></h2>
+      </div>
+      <div class="githubSources">
+        <div class="barikq_source-wrapper source-wrapper">
+
+          <a href="" target="_blank">
+            <img src="./img/github.svg">
+            <h4> <strong></strong> </h4>
+          </a>
+        </div>
+        <div class="original_source-wrapper source-wrapper">
+
+          <a href="" target="_blank">
+            <img src="./img/github.svg">
+            <h4>Check <strong>original</strong> piskel app github repo</h4>
+          </a>
+        </div>
+        <div class="piskel-wrapper source-wrapper">
+
+          <a href="https://www.piskelapp.com/" target="_blank">
+            <img src="./img/piskelApp.png">
+            <h4>You can also check original <strong>piskel</strong> app</h4>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </body>
+
+</html>

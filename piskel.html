@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="google-signin-client_id"
+      content="1087138147820-h0vnaq3268gj241ctokv99ifr3jj25a3.apps.googleusercontent.com"
+    />
+    <script src="./src/scripts/SingIn/SignIn.js"></script>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="./src/styles/style.css" />
+
+    <script></script>
+    <title>New piskel</title>
+  </head>
+  <body>
+  <!--
+    <nav class="navbar sticky-top navbar-dark" id="navbar">
+      <a class="navbar-brand" href="#">Piskel Clone</a>
+
+      <span class="sprite_name navbar-text" id="spriteName">
+        New Sprite
+      </span>
+
+      <div class="nav_btn_container" id="gSignIn"></div>
+
+      <div class="userContent" style="display: none;"></div>
+    </nav> -->
+
+    <div class="container-fluid">
+      <div class="row">
+        <!--  -->
+
+        <div class="col-1 tools-wrapper" id="tools-wrapper">
+          <ul class="tools-list" id="tools-list">
+            <li class="tool pen" id="pen_tool">
+              <span class="hint">Pen Tool (<strong>P</strong>)</span>
+            </li>
+            <li class="tool mirror" id="mirror_tool">
+              <span class="hint">Mirror Tool (<strong>L</strong>)</span>
+            </li>
+            <li class="tool bucket" id="bucket_tool">
+              <span class="hint">Bucket Tool (<strong>B</strong>)</span>
+            </li>
+            <li class="tool colorSwap" id="colorSwap_tool">
+              <span class="hint">Paint all Pixels of the Same Color (<strong>K</strong>)</span>
+            </li>
+            <li class="tool eraser" id="eraser_tool">
+              <span class="hint">Eraser Tool (<strong>E</strong>)</span>
+            </li>
+            <li class="tool stroke" id="stroke_tool">
+              <span class="hint">Create Line (<strong>S</strong>)</span>
+            </li>
+            <li class="tool strange" id="strange_tool">
+              ??
+              <span class="hint"> Idk what is it (<strong>7</strong>)</span>
+            </li>
+            <li class="tool rectangle" id="rectangle_tool">
+              <span class="hint"> Create rectangle (<strong>R</strong>)</span>
+            </li>
+            <li class="tool circle" id="circle_tool">
+              <span class="hint">Circle Tool (<strong>C</strong>)</span>
+            </li>
+            <li class="tool move" id="move_tool">
+              <span class="hint">Move your canvas (<strong>M</strong>)</span>
+            </li>
+            <li class="tool shape" id="shape_tool">
+              <span class="hint">Doesn't work (<strong></strong>)</span>
+            </li>
+            <li class="tool dithering" id="dithering_tool">
+              <span class="hint"
+                >Dithering Tool (stains the canvas in a checkerboard pattern)
+                (<strong>D</strong>)</span
+              >
+            </li>
+            <li class="tool rotate" id="rotate_tool">
+              <span class="hint">Rotate canvas (<strong>T</strong>)</span>
+            </li>
+            <li class="tool flip" id="flip_tool">
+              <span class="hint">Flip Tool (<strong>F</strong>)</span>
+            </li>
+          </ul>
+          <div class="color_main color" id="color_tool color_main">
+            <input
+              type="color"
+              id="main"
+              name="Color"
+              value="#000000"
+              height="40px"
+              width="100px"
+            />
+            <label for="main">Main</label>
+          </div>
+          <div class="color_secondary color" id="color_tool color_secondary">
+            <input
+              type="color"
+              id="secondary"
+              name="Color"
+              value="#663399"
+              height="40px"
+              width="100px"
+            />
+            <label for="secondary">Secondary</label>
+          </div>
+          <div class="size_select" id="size_tool">
+            <label for="sizes">Canvas Sizes</label>
+            <select name="sizes" id="sizes_canvas">
+              <option class="option" value="32" id="size">32</option>
+              <option class="option" value="64" id="size">64</option>
+              <option class="option" value="128" id="size">128</option>
+            </select>
+          </div>
+          <div class="size_pen" id="size_tool">
+            <label for="sizes">Pen Sizes</label>
+            <select name="sizes" id="sizes_pen">
+              <option class="option" value="1" id="size">1</option>
+              <option class="option" value="2" id="size">2</option>
+              <option class="option" value="3" id="size">3</option>
+              <option class="option" value="4" id="size">4</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-11 column-wrapper" id="column-wrapper">
+          <!--  -->
+
+          <div class="left-column">
+            <ul class="list-group" id="sortable">
+              <li class="list-group-item frame active" id="frame_0" draggable="true">
+                <button class="copyBtn framesButtons" id="copyButton"></button>
+                <button class="deleteBtn framesButtons" id="deleteButton"></button>
+              </li>
+            </ul>
+            <button class="add-btn" id="add-btn">
+              Add new
+              <br />frame
+            </button>
+          </div>
+
+          <div class="main-column">
+            <div class="canvas-main-container" oncontextmenu="return false;"></div>
+          </div>
+
+          <div class="right-column">
+            <div class="preview-wrapper">
+              <div class="preview" id="preview">
+                <div id="fullScreen" class="full"></div>
+              </div>
+              <div class="frame_rate-wrapper" id="frame_rate-wrapper">
+                <input type="range" class="frame_rate" id="frame_rate" min="0" max="24" step="1" />
+                <p class="fps_value" id="fps_value">12</p>
+              </div>
+            </div>
+            <div class="layers-wrapper"></div>
+            <div class="info-wrapper">
+              <ul>
+                <li class="cursor_cords" id="cursor_coords">0x0</li>
+                <li class="layer_size" id="layer_size">32x32</li>
+              </ul>
+            </div>
+            <div class="localStorageButtons" id="localStorageButtons">
+              <button class="renderButton" id="renderButton">Render Your Data</button>
+              <button class="saveButton" id="saveButton">Save Your Data</button>
+              <button class="clearButton" id="clearButton">Clear All Data</button>
+              <button class="downloadButton" id="downloadButton">
+                Download Gif
+                <span class="hint">
+                  Before Download Gif Save All Your Progress to Local Storage!
+                </span>
+              </button>
+            </div>
+          </div>
+
+          <!--  -->
+        </div>
+
+        <!--  -->
+      </div>
+    </div>
+
+    <footer>
+      <div class="author">
+        <h2>Created by <a href="https://github.com/BarikQ" target="_blank">BarikQ</a></h2>
+      </div>
+    </footer>
+
+    <script src="./dist/app.bundle.js"></script>
+    <script src="./dist/gifshot.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script
+      src="https://apis.google.com/js/client:platform.js?onload=renderButton"
+      async
+      defer
+    ></script>
+  </body>
+</html>
